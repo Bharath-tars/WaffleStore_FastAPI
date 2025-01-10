@@ -11,6 +11,14 @@ import firebase_admin
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows selected origins only
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 # # Firebase Admin Setup
 # cred = credentials.Certificate("ecommerce-fedbd-firebase-adminsdk-87x48-aad7642618.json")
 # initialize_app(cred, {
