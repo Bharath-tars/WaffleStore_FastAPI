@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from firebase_admin import credentials, db, initialize_app
 from pydantic import BaseModel
 from typing import List, Optional
